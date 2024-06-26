@@ -1,0 +1,57 @@
+.form-container{
+  position: absolute;
+  top: 331px;
+  left: 24px;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  &__name-box{
+  height: 45px;
+  width: 327px;
+  border-radius: 8px;
+  border: solid 1px var(--light-grey);
+  text-align: start;
+  padding: 11px 16px;
+  }
+  &__name{
+  color: var(--deep-violet);
+  }
+  &__number{
+  margin-top: 20px;
+ 
+  }
+  &__mont-year-cvc-container{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  }
+  &__mont-year-twins{
+  display: flex;
+  flex-direction: row;
+  }
+  &__mont-year-box{
+  height: 45px;
+  width: 72px;
+  border-radius: 8px;
+  border: solid 1px var(--light-grey);
+  text-align: start;
+  padding: 16px 11px;
+  }
+  &__cvc-box{
+  height: 45px;
+  width: 164px;
+  border-radius: 8px;
+  border: solid 1px var(--light-grey);
+  text-align: start;
+  padding: 16px 11px;
+  }
+ 
+}
+label{
+  color: var(--deep-violet);
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
