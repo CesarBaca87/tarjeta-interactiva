@@ -1,43 +1,88 @@
 @use '../mixins/pseudo.scss' as *;
 @use '../mixins/resposive.scss' as *;
-.image{
-    position: relative;
-    z-index: -1; 
-   &__bg-mobile{
+.image {
+  position: relative;
+  z-index: -1;
+  &__bg-mobile {
     position: absolute;
     top: 0;
     height: 240px;
     width: 100%;
-   }
-    
-    &__bg{
+  }
+
+  &__bg {
     position: absolute;
     height: 240px;
-    width:100%;
+    width: 100%;
     top: 0;
     left: 0;
-    @include responsive(laptop) {
-    background-image: url(../../assets/images/bg-main-desktop.png);
-    position: absolute;
-    top: 500px;
+    @include responsive(tablet) {
+      position: absolute;
+      height: 240px;
+      width: 100vh;
+      left: 0;
+      top: 0;
+      @include responsive(laptop) {
+        background-image: url(/src/assets/images/bg-main-desktop.png);
+        position: absolute;
+        height: 100vh;
+        width: 483px;
+        left: 0;
+        top: 0;
+      }
     }
-    }
-    &__back{
+  }
+  &__back {
     position: absolute;
     height: 157px;
     width: 286px;
     top: 32px;
     left: 73px;
-    
+    @include responsive(tablet) {
+      position: absolute;
+      left: 260px;
+      @include responsive(laptop) {
+        position: absolute;
+        height: 200px;
+        width: 400px;
+        left: 200px;
+        top: 420px;
+        @include responsive(desktop) {
+          position: absolute;
+          height: 245px;
+          width: 447px;
+          left: 258px;
+          top: 469px;
+        }
+      }
     }
-    &__front{
+  }
+  &__front {
     position: absolute;
     height: 157px;
     width: 286px;
     top: 126px;
     left: 16px;
+    @include responsive(tablet) {
+      position: absolute;
+      left: 220px;
+      @include responsive(laptop) {
+        position: absolute;
+        height: 200px;
+        width: 400px;
+        left: 150px;
+        top: 200px;
+        @include responsive(desktop) {
+          position: absolute;
+          height: 245px;
+          width: 447px;
+          left: 164px;
+          top: 187px;
+        }
+      }
     }
-    &__circles{
+  }
+  &__circles {
     position: absolute;
     height: 30px;
     width: 30px;
@@ -46,35 +91,65 @@
     left: 36px;
     top: 144px;
     z-index: 1;
-    // &::after{
-    // content: '';
-    // position: absolute;
-    // height: 150px;
-    // width: 150x;
-    // background-color: red;
-    // top:400px;
-    // left: 50px;
-    // z-index: 1;
-    // }
-    // @include pseudo(13.5px, 13.5px) {
-    // border-radius: 100px;
-    // border: solid 1px white;
-    // left: 76.5px;
-    // top: 152.25px;
-    // }
-    
+    @include responsive(tablet) {
+      position: absolute;
+      left: 250px;
+      @include responsive(laptop) {
+        position: absolute;
+        left: 180px;
+        top: 220px;
+        @include responsive(desktop) {
+          left: 196px;
+          top: 215px;
+        }
+      }
     }
-    &__cardholder-name{
+    &::after {
+      content: '';
+      position: absolute;
+      height: 21.13px;
+      width: 21.13px;
+      border: solid 1px white;
+      border-radius: 100px;
+      top: 5px;
+      left: 50px;
+      z-index: 1;
+    }
+  }
+  &__cardholder-name {
     position: absolute;
-    font-size: 11px;
-    border: none;
-    background-color: transparent;
+    width: 89px;
+    height: 11px;
+    font-size: 9px;
+    letter-spacing: 1.29;
     color: white;
     font-weight: 500;
     top: 251px;
     left: 36px;
+    @include responsive(tablet) {
+      position: absolute;
+      left: 250px;
+      @include responsive(laptop) {
+        position: absolute;
+        width: 150px;
+        height: 18px;
+        left: 180px;
+        top: 369px;
+        font-size: 14px;
+        @include responsive(desktop) {
+          left: 196px;
+          top: 387.5px;
+          width: 150px;
+          height: 18px;
+          font-size: 14px;
+          letter-spacing: 2px;
+          font-weight: 500;
+          color: white;
+        }
+      }
     }
-    &__exp-date-default{
+  }
+  &__exp-date-default {
     position: absolute;
     font-size: 11px;
     border: none;
@@ -83,8 +158,27 @@
     font-weight: 500;
     top: 251px;
     left: 249px;
+    width: 34px;
+    @include responsive(tablet) {
+      position: absolute;
+      left: 450px;
+      @include responsive(laptop) {
+        position: absolute;
+        height: 200px;
+        width: 400px;
+        left: 480px;
+        top: 369px;
+        @include responsive(desktop) {
+          left: 528px;
+          top: 387.5px;
+          width: 50px;
+          height: 18px;
+          font-size: 14px;
+        }
+      }
     }
-    &__card-number{
+  }
+  &__card-number {
     position: absolute;
     font-size: 18px;
     border: none;
@@ -93,8 +187,31 @@
     font-weight: 500;
     top: 211px;
     left: 36px;
+    @include responsive(tablet) {
+      position: absolute;
+      left: 250px;
+      @include responsive(laptop) {
+        position: absolute;
+        width: 372px;
+        height: 36px;
+        left: 180px;
+        top: 310px;
+        font-size: 22px;
+        letter-spacing: 3.42px;
+        color: white;
+        @include responsive(desktop) {
+          left: 196px;
+          top: 326px;
+          width: 372px;
+          height: 36px;
+          font-size: 26px;
+          letter-spacing: 3.42px;
+          color: white;
+        }
+      }
     }
-    &__cvc-number{
+  }
+  &__cvc-number {
     position: absolute;
     font-size: 9px;
     border: none;
@@ -103,5 +220,26 @@
     font-weight: 500;
     top: 103px;
     left: 301px;
+    width: 22px;
+    height: 12px;
+    @include responsive(tablet) {
+      position: absolute;
+      left: 490px;
+      @include responsive(laptop) {
+        position: absolute;
+        top: 510px;
+        left: 525px;
+        font-size: 14px;
+        @include responsive(desktop) {
+          left: 616px;
+          top: 580px;
+          width: 34px;
+          height: 18px;
+          font-size: 14px;
+          letter-spacing: 2px;
+          color: white;
+        }
+      }
     }
+  }
 }

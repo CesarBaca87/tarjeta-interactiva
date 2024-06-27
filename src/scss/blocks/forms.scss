@@ -1,57 +1,70 @@
-.form-container{
+@use '../mixins/resposive.scss' as *;
+
+.form-container {
   position: absolute;
   top: 331px;
   left: 24px;
+  @include responsive(tablet) {
+    position: absolute;
+    left: 230px;
+    @include responsive(laptop) {
+      position: absolute;
+      height: 200px;
+      width: 400px;
+      left: 650px;
+      top: 250px;
+      @include responsive(desktop) {
+        position: absolute;
+        left: 832px;
+        top: 275px;
+      }
+    }
+  }
 }
-.form{
+.form {
   display: flex;
   flex-direction: column;
   gap: 9px;
-  &__name-box{
-  height: 45px;
-  width: 327px;
-  border-radius: 8px;
-  border: solid 1px var(--light-grey);
-  text-align: start;
-  padding: 11px 16px;
+  ::placeholder {
+    color: var(--light-grey);
   }
-  &__name{
-  color: var(--deep-violet);
+  &__name-box {
+    height: 45px;
+    width: 327px;
+    border-radius: 8px;
+    border: solid 1px var(--light-grey);
+    text-align: start;
+    padding: 11px 16px;
   }
-  &__number{
-  margin-top: 20px;
- 
+  &__name {
+    color: var(--deep-violet);
   }
-  &__mont-year-cvc-container{
-  display: flex;
-  flex-direction: row;
-  margin-top: 20px;
+  &__number {
+    margin-top: 20px;
   }
-  &__mont-year-twins{
-  display: flex;
-  flex-direction: row;
+  &__mont-year-cvc-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
   }
-  &__mont-year-box{
-  height: 45px;
-  width: 72px;
-  border-radius: 8px;
-  border: solid 1px var(--light-grey);
-  text-align: start;
-  padding: 16px 11px;
+  &__mont-year-twins {
+    display: flex;
+    flex-direction: row;
   }
-  &__cvc-box{
-  height: 45px;
-  width: 164px;
-  border-radius: 8px;
-  border: solid 1px var(--light-grey);
-  text-align: start;
-  padding: 16px 11px;
+  &__mont-year-box {
+    height: 45px;
+    width: 72px;
+    border-radius: 8px;
+    border: solid 1px var(--light-grey);
+    text-align: start;
+    padding: 16px 11px;
   }
- 
+  &__cvc-box {
+    height: 45px;
+    width: 164px;
+    border-radius: 8px;
+    border: solid 1px var(--light-grey);
+    text-align: start;
+    padding: 16px 11px;
+  }
 }
-label{
-  color: var(--deep-violet);
-    font-size: 12px;
-    letter-spacing: 2px;
-}
-

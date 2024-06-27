@@ -16,17 +16,17 @@
     <div class="image"> 
       <div class="image image__circles"></div>
       <picture >
-        <source class="image image__bg-desktop" media="(min-width: 768px)" srcset="./assets/images/bg-main-desktop.png">
+        <source class="image image__bg-desktop" media="(min-width: 1024px)" srcset="./assets/images/bg-main-desktop.png">
         <source class="image image__bg-mobile" media="(min-width: 360px)" srcset="./assets/images/bg-main-mobile.png">
+        <img class="image image__bg" src="./assets/images/bg-main-mobile.png" alt="mobile image">
       </picture>
       
       <img class="image image__back" src="./assets/images/bg-card-back.png" alt="card back">
       <img class="image image__front" src="./assets/images/bg-card-front.png" alt="card front">
-      <input type="text" name="name" id="name-default" class="image image__cardholder-name" placeholder="JANE APPLESEED" >
-      <input type="number" name="exp-date" id="exp-date-default" class="image image__exp-date-default" placeholder="00/00">
-      <input type="number" name="card-number" id="card-number-default" class="image image__card-number" placeholder="0000 0000 0000 0000">
-      <input type="number" name="cvc-number" id="cvc-number-default" class="image image__cvc-number"
-        placeholder="000">
+      <span id="name-default" class="image image__cardholder-name">JANE APPLESEED</span>
+      <span id="exp-date-default" class="image image__exp-date-default">00/00</span>
+      <span id="card-number-default" class="image image__card-number"> 0000 0000 0000 0000</span>
+      <span id="cvc-number-default" class="image image__cvc-number">000</span>
       <!-- <span class="image image__cardholder-name" aria-placeholder="JANE APPLESEED"></span>
       <span class="image image__exp-cvc" aria-placeholder="000"></span>
       <span class="image image__card-number" aria-placeholder="0000 0000 0000 0000"></span> -->
@@ -45,9 +45,9 @@
 
         <div class="form form__mont-year-cvc-container">
           <div class="form form__mont-year">
-            <label for="number-moont-year">EXP. DATE (MM/YY)</label>
+            <label for="number-mont-year">EXP. DATE (MM/YY)</label>
             <div class="form form__mont-year-twins">
-              <input type="number" id="number-moont-year" name="mont-year" placeholder="MM" class="form__mont-year-box">
+              <input type="number" id="number-mont-year" name="mont-year" placeholder="MM" class="form__mont-year-box">
               <input type="number" id="number-year-year" name="mont-year" placeholder="YY" class="form__mont-year-box">
             </div>
           </div>
